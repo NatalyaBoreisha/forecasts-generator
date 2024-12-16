@@ -34,7 +34,7 @@
   
   forecastBtn.addEventListener("click", () => {
 
-    if(currentForecastTitle.textContent.length > 0 && currentForecastProbability.textContent.length > 0) {
+    if(currentForecastTitle.textContent && currentForecastProbability.textContent) {
         const previousForecast = forecastTemplate.content.cloneNode(true);
         const previousForecastTitle = previousForecast.querySelector(".forecast-item h3");
         previousForecastTitle.textContent = currentForecastTitle.textContent;
